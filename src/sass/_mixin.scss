@@ -1,0 +1,22 @@
+@import "_variables";
+
+@mixin shabox {
+  -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+  -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+  box-shadow: 10px 10px 15px -4px #6b717f;
+}
+
+@mixin bodyscss {
+  font: 100% "Space Mono", monospace;
+  color: #6b717f;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+@mixin bo-pa-co {
+  border: 1px solid $border-color;
+  padding: 16px;
+  color: $white;
+}

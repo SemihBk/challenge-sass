@@ -1,0 +1,115 @@
+@import '_variables';
+@import '_mixin';
+
+body {
+  @include bodyscss;
+
+  header {
+    h1 {
+      color: $pink;
+      text-align: center;
+    }
+  }
+
+  main {
+    padding: 0 1em;
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+
+      #selling-points {
+        flex-grow: 2;
+        flex-basis: 100%;
+      }
+
+      section {
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $border-color solid;
+        
+        @include shabox;
+
+        padding: 16px;
+        margin: 16px;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+
+        h2 {
+          color: $pink;
+        }
+
+        
+
+        code {
+          background: #000;
+          border: 1px solid #6b717f;
+          color: $border-color;
+          page-break-inside: avoid;
+          font-family: monospace;
+          font-size: 15px;
+          line-height: 1.6;
+          margin-bottom: 1.6em;
+          max-width: 100%;
+          overflow: auto;
+          padding: 1em 1.5em;
+          display: block;
+          word-wrap: break-word;
+
+          &.before {
+            float: left;
+            width: 40%;
+          }
+
+          &.after {
+            float: right;
+            width: 40%;
+          }
+        }
+
+
+      }
+    }
+    
+
+    
+  }
+
+  
+
+
+
+  
+
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: $padope*2;
+  margin-bottom: 0px;
+  color: $pink;
+}
+
+.messages {
+  padding: 16px;
+
+  .success {
+    @include bo-pa-co;
+
+    background-color: $greeny;
+  }
+
+  .error {
+    @extend .success;
+
+    background-color: red;
+  }
+
+  .warning {
+    @extend .success;
+
+    background-color: orange;
+  }
+}
